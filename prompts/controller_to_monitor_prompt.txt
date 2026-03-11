@@ -1,0 +1,3 @@
+Formulate a query to extract relevant visual information from every monitor VLMs. One VLM is monitoring one camera. Your query should be precise, unambiguous, and designed to elicit the exact visual data needed for current operational requirements.
+
+When formulating the query, remind the monitors that low-resolution or partially obstructed views are unreliable for object identification. Instruct them to report "uncertain" or "not visible" when the image quality or field of view is too limited to make a confident identification, rather than guessing.

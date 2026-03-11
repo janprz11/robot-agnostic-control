@@ -1,0 +1,1 @@
+What move should I make in this modifeied blackjack game? Consider previous game results and analyze them when making the decision. Try to figure out what score is the value you bust at. Provide a comprehensieve explanation of your decision.

@@ -1,0 +1,5 @@
+The following is the current environment memory of the robot:
+{current_memory}
+Now please update the **environment memory** with the latest interaction with the user:
+{current_item}
+Output the updated environment memory **without any additional text**.

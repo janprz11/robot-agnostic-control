@@ -1,0 +1,11 @@
+**Current Robot Position Status:**
+- X-axis (left/right): {x_axis:.2f} units from origin (negative=left, positive=right)
+- Y-axis (up/down): {y_axis:.2f} units from origin (negative=down, positive=up)
+- Z-axis (rotation): {z_rotation:.2f} units from origin (negative=counter-clockwise, positive=clockwise)
+- Finger position: {finger_position:.2f} units from neutral (negative=bent inward, positive=extended outward)
+
+**Position Tracking Notes:**
+- All positions represent cumulative displacement from the initial origin position
+- Each movement action (move_left, move_right, etc.) increments/decrements the respective axis by the movement intensity
+- Joint limits are strictly enforced at +/-1.0 units from center - movements beyond this range are automatically clamped
+- Current position must be considered when planning subsequent movements to avoid joint limits

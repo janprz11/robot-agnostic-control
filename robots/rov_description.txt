@@ -1,0 +1,26 @@
+# Robot Structure Summary
+
+## General Robot Structure
+This is a thruster-driven remotely operated underwater vehicle (ROV). The robot has a compact open-frame chassis with six thrusters arranged to provide movement in all three dimensions. It is designed for underwater navigation and inspection tasks. The frame carries cameras mounted at fixed positions to provide visual coverage of the surrounding underwater environment.
+
+## Propulsion and Movement
+1. **Horizontal Thrusters** - Four thrusters mounted in a vectored configuration on the frame, providing forward/backward thrust and yaw rotation. By varying thrust between left and right thruster pairs, the ROV can translate or rotate in the horizontal plane.
+
+2. **Vertical Thrusters** - Two thrusters mounted vertically on the frame, providing upward and downward thrust. These control the ROV's depth and pitch angle in the water column.
+
+3. **Forward/Backward Drive** - All horizontal thrusters driven in the same direction, translating the ROV forward or backward through the water.
+
+4. **Rotation** - Horizontal thrusters driven differentially to rotate the ROV clockwise or counterclockwise in place.
+
+5. **Pitch Control** - Vertical thrusters driven to angle the ROV upward or downward, changing its pitch orientation.
+
+## Available Actions
+1. **move_forward** - Drives horizontal thrusters forward, translating the ROV ahead through the water.
+2. **move_backward** - Drives horizontal thrusters in reverse, translating the ROV backward through the water.
+3. **rotate_left** - Drives horizontal thrusters differentially to rotate the ROV counterclockwise in place.
+4. **rotate_right** - Drives horizontal thrusters differentially to rotate the ROV clockwise in place.
+5. **pitch_up** - Drives vertical thrusters to pitch the ROV upward.
+6. **pitch_down** - Drives vertical thrusters to pitch the ROV downward.
+
+## Camera Information
+Cameras are mounted on the ROV frame to provide visual coverage of the underwater environment. All cameras provide color (RGB) output for underwater scene observation.

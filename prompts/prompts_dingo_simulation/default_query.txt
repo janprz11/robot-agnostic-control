@@ -1,0 +1,32 @@
+# Task Description
+Navigate the robot towards a fire extinguisher.
+First, explore the environment until the front facing camera can see the fire extinguisher.
+Once visible in the front facing camera, move forward towards it.
+
+The fire extinguisher is mounted on a wall. It may be obscured from certain angles by other objects.
+
+# Exploration Guidance
+- If the target is not visible, devise your own exploration strategy based on the provided descriptions of what the cameras observe
+- Choosing opposing actions consecutively (e.g. rotate_left then rotate_right, or move_forward then move_backward) returns the robot to its prior state and provides no new information — avoid this
+- Review the history of actions taken and their described outcomes to track which directions and areas have already been explored, and prioritize unexplored regions
+
+# Motion Considerations
+- Consider only planar motion:
+  - Forward and backward translation along the current heading
+  - Left and right rotation
+- Cameras always face forward and sideways relative to the robot body
+- Orientation changes determine which wall sections are visible
+- Do not assume precise global localization
+- Reason in terms of relative pose and viewpoint changes
+
+# Camera Guidance
+- Prioritize feedback from the primary forward-facing camera
+- Since the fire extinguisher is wall-mounted, favor viewpoints that orient cameras toward vertical surfaces
+- Adjust orientation or position if described views are uninformative or repetitive
+
+# Approach Behaviour
+Once the fire extinguisher is visible in the front facing camera:
+1. Only move forward when the fire extinguisher is currently visible in the front facing camera
+2. If the fire extinguisher is no longer visible in the front facing camera, stop advancing and rotate to reacquire it before moving forward again
+3. Do not continue driving forward on the assumption the target is still ahead — always confirm visibility first
+4. Keep approaching the fire extinguisher until you are as close as possible — the system will automatically stop when you are close enough

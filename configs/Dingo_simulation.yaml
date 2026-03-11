@@ -1,0 +1,29 @@
+defaults:
+    - base
+    - _self_
+
+interface: isaac_sim
+
+# Isaac Sim settings
+sim_usd_path: "/home/dylanashley/Documents/Projects/robot-project/Simulations/Dingo.usd"
+sim_headless: false
+sim_enable_livestream: True
+sim_width: 1280
+sim_height: 720
+sim_cameras:
+    - dingo_fw_camera
+    - dingo_left_camera
+    - dingo_right_camera
+sim_robot_prim_name: "dingo"
+sim_target_prim_name: "SM_FireExtinguisher_02"
+sim_proximity_threshold: 1                        # distance in meters to trigger stop
+
+max_instructions: 25
+robot_file: "dingo_description"
+
+# simulation-specific prompts
+controller_system_prompt_file:
+    "prompts/prompts_dingo_simulation/controller_system_prompt.txt"
+default_query_file:
+    "prompts/prompts_dingo_simulation/default_query.txt"
+tools_definition_file: "prompts/prompts_dingo_simulation/tools.json"

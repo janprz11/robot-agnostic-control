@@ -1,0 +1,17 @@
+defaults:
+    - base
+    - _self_
+
+interface: "blackjack"
+runtime: 9999
+num_episodes: 101
+sleep: 0
+
+# blackjack-specific prompts
+controller_system_prompt_file:
+    "prompts/prompts_blackjack/controller_system_prompt.txt"
+monitor_system_prompt_file:
+    "prompts/prompts_blackjack/monitor_system_prompt.txt"
+default_query_file:
+    "prompts/prompts_blackjack/default_query.txt"
+tools_definition_file: "prompts/prompts_blackjack/tools.json"

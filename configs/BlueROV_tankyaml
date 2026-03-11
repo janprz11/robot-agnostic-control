@@ -1,0 +1,6 @@
+defaults:
+    - BlueROV
+    - _self_
+default_query_file:
+    "prompts/prompts_underwater_tank/default_query.txt"
+crop_images: true

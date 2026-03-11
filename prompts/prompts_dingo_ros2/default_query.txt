@@ -1,0 +1,40 @@
+# Task Description
+I have a small fire. Can you help me locate the fire extinguisher
+The fire extinguisher was last seen on the floor near some boxes.
+You thus may have to navigate around some boxes to locate them.
+Thus you should explore the environment until the front facing camera can see the fire extinguisher.
+Once visible in the front facing camera, move forward towards it, rotating only when it leaves your line of sight; when the target is visible, moving forwards will ALWAYS bring you closer to it.
+You SHOULD collide with the extinguisher to complete and SHOULD NOT avoid colliding with it.
+This is the ONLY object you should be ok with colliding with but you should show no hesitation doing this.
+
+# Safety
+- The robot is operating inside a bounded area enclosed by net-like curtains. These curtains mark the boundaries of the workspace. The robot may approach them but must not drive through them. Your objective DOES NOT lie outside the curtains. The net-like curtain will be visible in virtually every camera view regardless of distance — Its presence in the image alone is not an indication of proximity. Only treat the curtain as a blocking barrier and stop moving toward it when it is filling a large portion of the forward view and you have strong reason to believe you are very close to it.
+- Note that the structure of the workspace is such that moving towards the extinguisher when spotted will NEVER be obstructed by the net, regardless of what you might believe.
+- The operating area is divided into parts by boxes. The robot may need to navigate around them to reach different parts of the workspace.
+- Be aware of obstacles in the environment, but only stop or reroute when an obstacle is immediately in front of the robot and physical contact is imminent. Obstacles that are visible but at a distance do not require any action — continue moving and only react when they become a genuine immediate hazard.
+- If the path ahead is physically blocked with no room to pass, rotate to find a clearer direction. If you are unsure whether something is blocking the path, assume it is not and continue moving forward.
+
+# Exploration Guidance
+- If the target is not visible, devise your own exploration strategy based on the provided descriptions of what the camera observes
+- Choosing opposing actions consecutively (e.g. rotate_left then rotate_right, or move_forward then move_backward) returns the robot to its prior state and provides no new information. Thus, you are NEVER permitted to do the exact opposite action of the one you've just taken without some other intermediate action. I repeat, you are NEVER allowed to revert an action you take without some other intermediate action. So you are NOT allowed to move_right immediately after one or more move_left commands, move_left immediately after one or more move_right commands, move_forward immediately after one or more move_backward commands, or move_backward immediately after one or more move_forward commands. Under no circumstances should you violate this rule and should instead consider other actions you could take if you feel tempted to. This is a hard constraint and any violation of this rule will be considered a failure of the task you have been assigned and so should be considered every time you take an action and ALWAYS avoided, regardless of circumstance.
+- Use a mix of rotation and forward movement to explore effectively. Rotate to look around, then move forward to cover new ground.
+
+# Motion Considerations
+- Consider only planar motion:
+  - Forward and backward translation along the current heading.# Approach Behavior
+Once the fire extinguisher is visible in the front facing camera:
+1. Move forward when the fire extinguisher is currently visible in the front facing camera
+2. If the fire extinguisher is no longer visible in the front facing camera, stop advancing and rotate to reacquire it before moving forward again.
+3. Do not continue driving forward on the assumption the target is still ahead; always confirm visibility first.
+4. Keep approaching the fire extinguisher until you are as close as possible.
+5. Do not stop for obstacles unless physical contact is imminent — an obstacle being visible in the camera is not a reason to stop. Only pause and reroute when an obstacle is immediately in front of the robot with no room to continue. Objects at any noticeable distance ahead should be ignored and approached; stop only when you are about to make contact.
+  - Left and right rotation.
+- The camera always faces forward relative to the robot body.
+- Orientation changes determine which parts of the environment are visible.
+- Do not assume precise global localization.
+- Reason in terms of relative pose and viewpoint changes.
+
+# Camera Guidance
+- You have a single camera that faces forward (i.e., in the direction a forward move would take you).
+- Use camera observations to determine which direction to explore next.
+- Adjust orientation or position if described views are uninformative or repetitive.

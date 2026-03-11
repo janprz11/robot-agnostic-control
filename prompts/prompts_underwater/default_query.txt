@@ -1,0 +1,29 @@
+# Task Description
+Hey, I've accidentally dropped a couple of bright blue boxes into the pool Can you help me find them? They have sunk to the bottom somewhere. Have a look around until you can spot one, then get as close to it as you can. That way I can look for you to find the box. There's a lot of other random things in the pool. You can use those to help figure out where you are but you can otherwise ignore them. When you spot the target, descend and approach it. When the monitor can see the target, moving forwards will ALWAYS bring you closer to the target.
+
+# Safety
+- The robot is operating inside a pool. The pool walls, floor, and surface form the boundaries of the workspace. Since you're underwater and fairly robust, it's not the end of the world if you hit something, do not be hesitant of approaching objects or pool walls.
+- Other objects may be present in the pool. Be aware of them and avoid collisions.
+
+# Exploration Guidance
+- If the target is not visible, devise your own exploration strategy based on the provided descriptions of what the camera observes
+- Choosing opposing actions consecutively (e.g. rotate_left then rotate_right, or move_forward then move_backward) returns the robot to its prior state and provides no new information. Thus, you are NEVER permitted to do the exact opposite action of the one you've just taken without some other intermediate action. I repeat, you are NEVER allowed to revert an action you take without some other intermediate action. So you are NOT allowed to move_right immediately after one or more move_left commands, move_left immediately after one or more move_right commands, move_forward immediately after one or more move_backward commands, or move_backward immediately after one or more move_forward commands. Under no circumstances should you violate this rule and should instead consider other actions you could take if you feel tempted to. This is a hard constraint and any violation of this rule will be considered a failure of the task you have been assigned and so should be considered every time you take an action and ALWAYS avoided, regardless of circumstance.
+- Use a mix of rotation, depth changes, and forward movement to explore effectively. Rotate to look around, adjust depth to cover different levels, then move forward to cover new ground.
+- Review the history of actions taken and their described outcomes to track which directions and areas have already been explored, and prioritize unexplored regions if the target is not found.
+
+# Motion Considerations
+- Consider 3D motion:
+  - Forward and backward translation along the current heading.
+  - Left and right rotation (you should prefer right movements).
+  - Up and down movement.
+- The camera always faces forward relative to the robot body.
+- Orientation changes determine which parts of the environment are visible.
+- Do not assume precise global localization.
+- Reason in terms of relative pose and viewpoint changes.
+- When extremely close to a wall, try and turn repeatedly until you can see much more of the pool.
+
+# Camera Guidance
+- You have a single camera that faces forward (i.e., in the direction a forward move would take you).
+- Use camera observations to determine which direction to explore next.
+- Since the box is resting on the pool floor, consider descending to get a better view of the bottom.
+- Adjust orientation or depth if described views are uninformative or repetitive.

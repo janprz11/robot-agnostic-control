@@ -1,0 +1,3 @@
+Command Execution:
+- Command: {command}
+- Result: {result_summary}

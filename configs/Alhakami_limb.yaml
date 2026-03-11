@@ -1,0 +1,57 @@
+defaults:
+    - base
+    - _self_
+
+interface: "alhakami_limb"
+
+# === hardware settings for v2.4 limb ===
+broadcast: True
+broadcast_rate_s: 1.0
+cameras:
+    upper_middle_segment_finger_camera: "31:32:32:31:38:37"
+    finger_tip_forward_camera: "36:38:31:39:32:30"
+    finger_tip_down_camera: "32:32:34:31:37:36"
+    lower_middle_segment_finger_camera: "32:32:31:32:31:37"
+display: True
+event_timeout: 1.0
+fps_time_range: 2.0
+port:
+    name: "enp106s0"
+    scapy: False
+    type: "ethernet"
+process: True
+queue_size: 100
+servos:
+    finger_servo: "36:38:31:39:32:30"
+    inner_left_right_servo: "32:32:34:31:37:36"
+    up_down_servo: "31:32:32:31:38:37"
+    outer_left_right_servo: "32:32:31:32:31:37"
+set_slew_rate: False
+slew_rate: 2
+single_thread_interface: False
+
+limits:
+    "31:32:32:31:38:37":
+        min: -1.0
+        max: 1.0
+    "36:38:31:39:32:30":
+        min: -0.75
+        max: 0.75
+    "32:32:34:31:37:36":
+        min: -1.0
+        max: 1.0
+    "32:32:31:32:31:37":
+        min: -1.0
+        max: 1.0
+
+controller_system_prompt_file:
+    "prompts/prompts_Alhakami_limb/controller_system_prompt.txt"
+default_query_file:
+    "prompts/prompts_Alhakami_limb/default_query.txt"
+robot_position_template_file:
+    "prompts/prompts_Alhakami_limb/robot_position_template.txt"
+robot_file: "robots/Alhakami_et_all_description.txt"
+tools_definition_file: "prompts/prompts_Alhakami_limb/tools.json"
+runtime: 20
+save_step_counts: True
+upscale_images: True

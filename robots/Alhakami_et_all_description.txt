@@ -1,0 +1,30 @@
+# Robot Structure Summary
+
+## General Robot Structure
+This is a robotic arm with a multi-jointed finger system. The arm consists of a fixed tower base with a wrist mechanism that can rotate along multiple axes. The end of the arm features an articulated finger with three segments that can bend at different points. The finger is equipped with multiple cameras positioned at strategic locations to provide visual feedback.
+
+## Potentially Movable Joints (Actuators/Servos)
+1. **Wrist Up/Down Joint** - Connects the tower to the wrist_up_down link. Allows rotational movement around the vertical axis (full 360° rotation possible).
+
+2. **Wrist Rotation Joint** - Connects the wrist_up_down link to the wrist_rotation link. Allows rotational movement along the horizontal axis (full 360° rotation possible).
+
+3. **Finger Base Rotation** - Connects the wrist_rotation link to the finger_base. Allows rotational movement (full 360° rotation possible).
+
+4. **Base Finger Joint** - Connects the finger_base to the base_side_middle_finger. Allows rotational movement with limited range (±90°).
+
+5. **Middle Finger Joint** - Connects the base_side_middle_finger to the tip_side_middle_finger. Allows rotational movement with limited range (±90°).
+
+6. **Finger Tip Joint** - Connects the tip_side_middle_finger to the finger_tip. Allows rotational movement with limited range (±90°).
+
+## Camera Information
+1. **Base Side Cameras** (2) - Two cameras (base_finger_camera_side_1_sensor and base_finger_camera_side_2_sensor) mounted on either side of the finger base, providing side views of the finger's workspace.
+
+2. **Middle Finger Base Camera** - Camera (lower_middle_segment_finger_camera) mounted on the base segment of the finger, providing visual feedback of the lower part below the finger.
+
+3. **Middle Finger Tip Camera** - Camera (upper_middle_segment_finger_camera) mounted on the middle segment of the finger, monitoring the intermediate part below the finger.
+
+4. **Finger Tip Down Camera** - Camera (finger_tip_down_camera) mounted on the fingertip, pointing downward to monitor the area below the finger.
+
+5. **Finger Tip Forward Camera** - Camera (finger_tip_forward_camera) mounted on the fingertip, pointing forward to provide a view of what's in front of the finger.
+
+All cameras provide 100x100 resolution images at 10Hz update rate with a horizontal field of view of approximately 60 degrees.

@@ -1,0 +1,20 @@
+# brain installed manually first (only needed for ALhakami et. all Limb)
+accelerate
+compressed_tensors
+flash_attn==2.6.2
+gymnasium
+hydra-core
+numpy<2
+omegaconf
+openai
+opencv-python
+pillow
+pyapriltags
+pymavlink
+pyyaml
+safetensors
+torch==2.5.0
+torchvision
+tqdm
+transformers
+wandb

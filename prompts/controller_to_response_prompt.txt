@@ -1,0 +1,9 @@
+# Visual data query:
+{query_for_monitors}
+
+# Monitoring system feedback:
+{monitor_responses}
+
+# Output Guidelines
+1. First, conduct thorough analytical reasoning within `<think></think>` tags to evaluate all available information.
+2. Then, determine precisely **one** optimal command for the current operational context and return its name  within `<result></result>` tags. Make sure that the command chosen is consistens with your reasoning.

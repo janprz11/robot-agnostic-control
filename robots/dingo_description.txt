@@ -1,0 +1,29 @@
+# Robot Structure Summary
+
+## General Robot Structure
+This is a four-wheeled differential drive ground robot. The robot has a compact rectangular chassis with a low center of gravity, designed for indoor navigation. It uses a skid-steer drivetrain where the left and right wheel pairs are driven independently, allowing the robot to move forward, backward, and rotate in place. The chassis carries three cameras mounted at fixed positions to provide visual coverage of the environment.
+
+## Drivetrain and Movement
+1. **Left Wheel Pair** - Two wheels on the left side of the chassis, driven together. When activated, the left wheels spin forward, causing the robot to turn right (or move forward when combined with the right wheels).
+
+2. **Right Wheel Pair** - Two wheels on the right side of the chassis, driven together. When activated, the right wheels spin forward, causing the robot to turn left (or move forward when combined with the left wheels).
+
+3. **Forward Drive** - Both left and right wheel pairs driven forward simultaneously, moving the robot straight ahead.
+
+4. **Backward Drive** - Both left and right wheel pairs driven in reverse simultaneously, moving the robot straight backward.
+
+## Available Actions
+1. **move_forward** - Drives both wheel pairs forward, translating the robot ahead.
+2. **move_backward** - Drives both wheel pairs in reverse, translating the robot backward.
+3. **rotate_left** - Drives the wheel pairs differentially to rotate the robot counterclockwise in place.
+4. **rotate_right** - Drives the wheel pairs differentially to rotate the robot clockwise in place.
+5. **task_complete** - Signals that the current task has been completed and terminates the program.
+
+## Camera Information
+1. **Forward Camera** (dingo_fw_camera) - Mounted on the front of the chassis, pointing forward. Provides a view of what is directly ahead of the robot.
+
+2. **Left Camera** (dingo_left_camera) - Mounted on the left side of the chassis, pointing leftward. Provides a view of the environment to the robot's left.
+
+3. **Right Camera** (dingo_right_camera) - Mounted on the right side of the chassis, pointing rightward. Provides a view of the environment to the robot's right.
+
+All cameras provide 640x480 resolution images with color (RGB) output.

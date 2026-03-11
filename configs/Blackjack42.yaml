@@ -1,0 +1,15 @@
+defaults:
+    - Blackjack   # Inherit from standard blackjack config
+    - _self_                 # Override defaults with values in this file
+
+# Enable the Blackjack-42 variant
+use_blackjack_42: true
+
+# Set a shorter runtime for testing
+runtime: 100
+
+# Number of times to run the pipeline on the same image for each monitor
+n_monitor_runs: 1
+
+# Enable memory updates with events
+enable_memory_updates: true

@@ -1,0 +1,31 @@
+defaults:
+    - base
+    - _self_
+
+interface: "bluerov"
+max_instructions: 100
+
+
+# BlueROV2 settings
+rov_connection: "udpin:0.0.0.0:14550"            # MAVLink UDP connection string
+rov_camera_port: 5600                             # UDP port for H.264 camera stream
+rov_thrust: 600                                   # default thrust intensity (0-1000)
+rov_thrust_intensities:                           # per-movement thrust overrides (0-1000)
+    move_forward: 750
+    move_backward: 750
+    rotate_left: 250
+    rotate_right: 250
+    move_up: 250
+    move_down: 150
+rov_command_duration: 4                           # seconds to hold each command
+rov_color_correct: True                           # apply gray world white balance to camera frames
+rov_color_correct_blend: 0.5                      # blend factor between corrected (1.0) and original (0.0)
+
+robot_sdf_file: "rov_description"
+
+# underwater-specific prompts
+controller_system_prompt_file:
+    "prompts/prompts_underwater/controller_system_prompt.txt"
+default_query_file:
+    "prompts/prompts_underwater/default_query.txt"
+tools_definition_file: "prompts/prompts_underwater/tools.json"

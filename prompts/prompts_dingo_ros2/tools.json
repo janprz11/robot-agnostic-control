@@ -1,0 +1,18 @@
+[
+  {
+    "name": "move_forward",
+    "description": "Move the robot forward"
+  },
+  {
+    "name": "move_backward",
+    "description": "Move the robot backward"
+  },
+  {
+    "name": "rotate_left",
+    "description": "Rotate the robot to the left"
+  },
+  {
+    "name": "rotate_right",
+    "description": "Rotate the robot to the right"
+  }
+]

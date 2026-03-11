@@ -1,0 +1,29 @@
+# === algorithm defaults ===
+algorithm: "mindstorm"                            # algorithm to use; "mindstorm" or "mindstorm_random"
+model: "ChatGPT"                                  # model to use; ["Llama1B", "Llama3B", "Llama11B", "ChatGPT"]
+runtime: 120                                      # time to run for in minutes
+sleep: 1                                          # time to sleep for between actions
+num_episodes: 100                                 # number of episodes to run
+n_monitor_runs: 1                                 # number of monitor runs per step
+save_step_counts: False                           # toggles saving the steps per episode
+save_logs: False                                  # toggles saving run logs (JSONL, CSV, images)
+use_wandb: False                                  # toggles logging to wandb
+log_level: "INFO"                                 # how verbose the logging should be
+
+# === prompt file defaults ===
+
+controller_to_monitor_prompt_file:
+    "prompts/controller_to_monitor_prompt.txt"
+controller_to_response_prompt_file:
+    "prompts/controller_to_response_prompt.txt"
+monitor_system_prompt_file:
+    "prompts/monitor_system_prompt.txt"
+memory_curator_prompt_file:
+    "prompts/memory_curator.txt"
+parser_prompt_file: "prompts/parser_prompt.txt"
+memory_update_prompt_file: "prompts/memory_update_prompt.txt"
+meta_analysis_prompt_file: "prompts/meta_analysis_prompt.txt"
+command_execution_event_file:
+    "prompts/command_execution_event.txt"
+object_detection_event_file:
+    "prompts/object_detection_event.txt"

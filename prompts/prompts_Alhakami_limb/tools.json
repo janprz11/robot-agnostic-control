@@ -1,0 +1,42 @@
+[
+  {
+    "name": "move_left",
+    "description": "Move the robot to the left"
+  },
+  {
+    "name": "move_right",
+    "description": "Move the robot to the right"
+  },
+  {
+    "name": "move_up",
+    "description": "Move the robot upward"
+  },
+  {
+    "name": "move_down",
+    "description": "Move the robot downward"
+  },
+  {
+    "name": "rotate_left",
+    "description": "Rotate the robot clockwise"
+  },
+  {
+    "name": "rotate_right",
+    "description": "Rotate the robot counter-clockwise"
+  },
+  {
+    "name": "bend_finger",
+    "description": "Bend the robot's finger inward"
+  },
+  {
+    "name": "extend_finger",
+    "description": "Extend the robot's finger outward"
+  },
+  {
+    "name": "reset_position",
+    "description": "Reset all servos to their zero position"
+  },
+  {
+    "name": "task_complete",
+    "description": "Signal that the task has been completed successfully and terminate the program"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "move_forward",
+    "description": "Move the robot forward"
+  },
+  {
+    "name": "move_backward",
+    "description": "Move the robot backward"
+  },
+  {
+    "name": "rotate_left",
+    "description": "Rotate the robot to the left (90 degrees)"
+  },
+  {
+    "name": "rotate_right",
+    "description": "Rotate the robot to the right (90 degrees)"
+  },
+  {
+    "name": "move_up",
+    "description": "Move the robot upward (decrease depth)"
+  },
+  {
+    "name": "move_down",
+    "description": "Move the robot downward (increase depth)"
+  }
+]

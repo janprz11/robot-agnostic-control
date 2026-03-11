@@ -1,0 +1,8 @@
+defaults:
+    - Alhakami_limb
+    - _self_
+
+algorithm: "mindstorm_random"
+max_steps: 25
+run_log_file: "results/V2_random/random_run_log.csv"
+save_logs: False

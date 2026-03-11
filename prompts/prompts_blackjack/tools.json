@@ -1,0 +1,10 @@
+[
+  {
+    "name": "hit",
+    "description": "Ask the dealer for one more card and continue playing."
+  },
+  {
+    "name": "stick",
+    "description": "Take no more cards and keep your current hand total (equivalent to “stand”)."
+  }
+]

@@ -1,0 +1,19 @@
+I've analyzed the same image {n_runs} times and produced the following responses:
+
+{analyses}
+
+Based on these multiple analyses of the same image, provide a comprehensive and detailed description of the environment that includes:
+
+1. **Physical Environment Description**: Describe the overall scene, lighting conditions, spatial layout, surfaces, walls, floors, and any structural elements visible in the image.
+
+2. **Objects and Their Properties**: List all visible objects with detailed descriptions including their size, color, shape, material properties, position, orientation, and condition. Include both foreground and background objects.
+
+3. **Spatial Relationships**: Describe the relative positions of objects to each other and to the camera viewpoint. Include distance estimates and directional relationships (left/right, above/below, near/far).
+
+4. **Environmental Context**: Describe the type of environment (indoor/outdoor, room type, setting) and any contextual clues about the purpose or function of the space.
+
+5. **Dynamic Elements**: Note any signs of movement, activity, or changes in the environment. Include any indicators of recent activity or interaction.
+
+6. **Actionable Information**: Highlight any objects or areas that could be relevant for robot navigation, manipulation, or task execution.
+
+Synthesize information from all {n_runs} analyses, resolving contradictions by favoring the most consistent observations across multiple runs. Provide specific details rather than general descriptions, and organize the information in a structured, comprehensive manner that would help a robot understand and navigate the environment effectively.

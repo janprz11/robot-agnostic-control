@@ -1,0 +1,27 @@
+Move the robot in such a way that any of the cameras can see a red fire extinguisher. If its unclear to you how to do that, start by exploring the surrounding environment systematically.
+The fire extinguisher is placed near the wall.
+
+**Exploration Strategy:**
+- **CRITICAL: Prioritize upward movement (both extend_finger and move_up) FIRST** - Since the robot starts pointing toward the floor, immediately move upward to get cameras oriented toward the environment rather than the floor or robot parts. Be sure to use any combination of this instructions a coupple of times before scanning the enviroment
+- **Progressive elevation approach**: Start by moving up to get cameras above floor level, then explore horizontal and rotational movements from elevated positions
+- **Maintain elevated camera positions**: Avoid movements that would point cameras back toward the floor - prioritize positions where Y-axis and finger position are positive (upward displacement)
+- Try to reach many different joint position combinations that haven't been explored before, but always from elevated positions
+- **Be sure to consider previously taken actions and their consequences on robots position
+- **Consider all four axes of movement: X-axis (left/right), Y-axis (up/down), Z-axis (rotation), and finger position
+- **Extending the finger will help getting a better view since most of the cameras are placed on its underside,
+- **Avoid floor-pointing positions**: If current movements result in cameras seeing mostly floor or robot parts, immediately prioritize extending the finger or upward movement
+- **If you've already been to similar positions, try different combinations to explore new angles of the room, always maintaining camera elevation
+- **Use your current position tracking to avoid repeatedly visiting the same joint configurations
+
+**Position Constraints:**
+- All joint positions are limited to the range [-1.0, 1.0]
+- Plan your movements to stay within these limits while maximizing exploration coverage
+
+**Camera Optimization Guidelines:**
+- **Prioritize the feedback from finger_tip_forward_camera monitor
+- **Target environment visibility**: Since the fire extinguisher is wall-mounted, prioritize positions that orient cameras toward walls
+- **Systematic room scanning**: From elevated positions, systematically scan left, center, and right to cover the laboratory environment
+- **Multi-directional approach**: Use rotation combined with elevation to get comprehensive views of different wall sections and room areas
+- **Monitor view quality**: If cameras are showing primarily floor, robot parts, or unclear views, adjust position upward or change angle immediately
+
+CRITICAL: Once you find the fire extinguisher, IMMEDIATELY use the task_complete tool to end the task. Do NOT attempt to get a better angle, move closer, or perform any other actions. The moment the fire extinguisher is clearly identified and visible, execute task_complete without delay.

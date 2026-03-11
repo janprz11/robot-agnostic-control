@@ -1,0 +1,6 @@
+defaults:
+    - Blackjack42    # Inherit from blackjack42 config
+    - _self_                   # Override defaults with values in this file
+
+# Disable LLM-based memory curation; raw input is appended directly
+curate_memory: false

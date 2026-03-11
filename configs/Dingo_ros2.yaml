@@ -1,0 +1,25 @@
+defaults:
+    - base
+    - _self_
+
+interface: "dingo_ros2"
+
+# ROS2 settings
+ros2_camera_topics:
+    front_camera: "/do100_kacs05_01/sensors/camera_0/color/compressed"
+ros2_cmd_vel_topic: "/do100_kacs05_01/cmd_vel"
+ros2_linear_speed: 0.5                            # m/s
+ros2_angular_speed: 0.3491                        # rad/s
+ros2_action_duration: 3.0                         # seconds per movement command
+
+robot_file: "dingo_description"
+runtime: 9999                                     # no practical time limit
+num_episodes: 1
+save_logs: True
+
+# dingo-specific prompts
+controller_system_prompt_file:
+    "prompts/prompts_dingo_ros2/controller_system_prompt.txt"
+default_query_file:
+    "prompts/prompts_dingo_ros2/default_query.txt"
+tools_definition_file: "prompts/prompts_dingo_ros2/tools.json"

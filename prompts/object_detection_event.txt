@@ -1,0 +1,5 @@
+Object Detection:
+- Object: {object_name}
+- Detected by camera: {camera_name}
+- Last robot movement: {last_movement}
+- Position inference: Use camera location and movement history to determine relative position
